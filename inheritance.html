@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="specificity.css">
+    <title>Inheritance</title>
+    <style>
+        body{
+            color: peru;
+            font-size: large;
+        }
+        .class-1 a{
+            color: inherit;
+        }
+        .class-2 a{
+            color: initial;
+        }
+        .class-3 a{
+            color: unset;
+        }
+        .important a{
+            color: blueviolet !important;
+        }
+        
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Default <a href="">link </a>color</li>
+        <li class="class-1">Inherit <a href="">link</a> color</li>
+        <li class="class-2">Initial <a href="">link</a> color</li>
+        <li class="class-3">Unset <a href="">link</a> color</li>
+        <li class="important" >important key word <a href="" style="color: red;">link</a> color</li>
+
+    </ul>
+</body>
+</html>
+<!--unset uses it main or the top level parent's properties i.e, it supports inheritance
+    inherit is the property which derives from the parent class onto the child class
+    initial is the property which takes the default value and is dependent on the browser
+    line 34 and 24 uses important command to give a color utmost priority even though line style has more priority than the head 
+    in specificity -->
